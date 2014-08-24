@@ -15,9 +15,9 @@
   },
   "scripts": {
     "build": "node index.js",
-    "commit-built": "git add build -A && git commit -m \"build files at `date`\" -n > /dev/null 2>&1; exit 0",
-    "ghpages": "git subtree split --prefix build/ -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
-    "deploy": "npm run build && npm run commit-built && npm run ghpages"
+    "divshot": "divshot push",
+    "commit": "git add -A -v && git commit -m \"Build Files\" && git push origin master",
+    "deploy": "npm run build && npm run commit && npm run divshot && npm run heroku"
   },
   "repository": {
     "type": "git",
