@@ -1,0 +1,39 @@
+{
+  "name": "hacker-mentality",
+  "version": "0.0.0",
+  "description": "Peter DeMartini's Personal Blog",
+  "main": "index.js",
+  "dependencies": {
+    "metalsmith": "~0.10.0"
+  },
+  "devDependencies": {
+    "metalsmith-markdown": "~0.2.1",
+    "metalsmith-permalinks": "~0.3.2",
+    "handlebars": "~2.0.0-alpha.4",
+    "metalsmith-collections": "~0.6.0",
+    "metalsmith-templates": "~0.5.2"
+  },
+  "scripts": {
+    "build": "node index.js",
+    "commit-built": "git add build -A && git commit -m \"build files at `date`\" -n > /dev/null 2>&1; exit 0",
+    "ghpages": "git subtree split --prefix build/ -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
+    "deploy": "npm run build && npm run commit-built && npm run ghpages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/peterdemartini/hacker-mentality.git"
+  },
+  "keywords": [
+    "Peter",
+    "DeMartini",
+    "Hacker",
+    "Mentality",
+    "Software"
+  ],
+  "author": "Peter DeMartini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterdemartini/hacker-mentality/issues"
+  },
+  "homepage": "https://github.com/peterdemartini/hacker-mentality"
+}

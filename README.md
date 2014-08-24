@@ -1,4 +1,4 @@
-hacker-mentality
+Peter DeMartini
 ================
 
-Peter DeMartini's personal website / blog
+I hack my way through life, without sacrificing creativity and passion. I specialize in web applications; the tools of my trades are JavaScript, CodeIgniter and the #IoT.
