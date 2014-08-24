@@ -16,7 +16,7 @@
   "scripts": {
     "build": "node index.js",
     "divshot": "divshot push",
-    "commit": "git add -A -v && git commit -m \"Build Files\" && git push origin master",
+    "commit": "git add -A && git commit -m \"Build Files\" && git push origin master",
     "deploy": "npm run build && npm run commit && npm run divshot && npm run heroku"
   },
   "repository": {
